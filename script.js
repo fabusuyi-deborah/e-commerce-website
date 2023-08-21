@@ -50,7 +50,7 @@ var x = setInterval(function(){
 function search() {
   let filter = document.getElementById('find').value.toUpperCase();
 
-  let item = document.querySelectorAll('.product')
+  let item = document.querySelectorAll('.containers')
 
   let L = document.getElementsByTagName('h3')
 
@@ -65,6 +65,8 @@ function search() {
     else
     {
       item[i].style.display = "none";
+      // document.write("Check back later")
+      // print("Check back later")
       }
   }
 }

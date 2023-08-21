@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: none;
+  /* border: none; */
   outline: none;
   transition: all 0.3s cubic-bezier(0.38, 1.15, 0.7, 1.12);
   text-decoration: none;
@@ -21,6 +21,10 @@ body,html{
 *::selection {
   background: var(--electric_blue);
   color: #fff;
+}
+
+button{
+  border: none;
 }
 
 section{
@@ -203,7 +207,7 @@ h2 span{
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev, .next { 
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -408,7 +412,15 @@ h2 span{
 }
 
 /* footer */
-
+.footer{
+  background-color: #f96060;
+  padding: 60px 0 20px;
+}
+.footer .row{
+  display: flex;
+  flex-basis: 18%;
+  width: 350px;
+}
 
 /* PRODUCT PAGE */
 
@@ -426,10 +438,125 @@ h2 span{
   display: inline-block;
 }
 
-.search input {
+.products_section .search input {
   width: 60%;
   padding: 5px 16px;
   background: transparent;
   border: 1px solid #000;
 
+}
+
+.search::placeholder {
+  font-weight: 500;
+}
+
+
+/* Shop css */
+.details_container {
+  display: flex;
+  padding-top: 8rem;
+}
+
+.column_1,
+.column_2 {
+  flex-basis: 100%;
+}
+
+.column_2{
+  margin-left: 20px;
+  padding-top: 3px;
+}
+
+.details{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* Account page */
+.account_container{
+  height: 100vh;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+.account_container i{
+  color: black;
+}
+
+.form_container{
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0,  0,  0.1) ;
+}
+
+.form_container .form{
+  padding: 30px;
+}
+
+.form_container .form .title{
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.form .title::before{
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: #f96060;
+  border-radius: 25px;
+}
+
+
+.form .input-field{
+ position: relative;
+ height: 50px ;
+ width: 100%;
+ margin-top: 30px;
+}
+
+.input-field input{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding:0 35px ;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+  border-bottom-color: #f96060;
+}
+
+.input-field i{
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50) ;
+  color: #999;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+  color: #f96060;
+}
+
+.input-field  .fa-lock{
+ left: 0;
+}
+
+.input-field .fa-eye-slash{
+  right: 0;
 }
